@@ -63,7 +63,7 @@
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
 	<!-- <plugin name="de.appplant.cordova.plugin.local-notification-ios9-fix" spec="0.8.2" source="pgb" /> -->
-	<plugin spec="https://github.com/willyboy/cordova-plugin-local-notifications" source="git" />
+	<plugin spec="https://github.com/katzer/cordova-plugin-local-notifications" source="git" />
 	<!-- <plugin spec="https://github.com/rezashnia1234/llocalnotif" source="git" /> -->
 
     <!-- 
