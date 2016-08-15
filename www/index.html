@@ -113,6 +113,7 @@
 		function Set_notif_delay() {
 			var now             = new Date().getTime(),
 				_5_sec_from_now = new Date(now + 5*1000);
+			var _10_sec_from_now = new Date(now + 10*1000)
 /*
 			cordova.plugins.notification.local.schedule({
 				text: "Delayed Notification",
@@ -122,15 +123,24 @@
 			});
 */
 			var sound = device.platform == 'Android' ? 'file://sound.mp3' : 'file://beep.caf';
-
-			cordova.plugins.notification.local.schedule({
-				id: 1,
-				title: 'Scheduled with delay',
-				text: 'Test Message 1',
-				at: _5_sec_from_now,
-				sound: sound,
-				badge: 12
-			});
+			setTimeout(function(){
+				cordova.plugins.notification.local.schedule({
+					id: 1,
+					title: 'Scheduled with delay',
+					text: 'Test Message 1',
+					at: _5_sec_from_now,
+					sound: sound,
+					badge: 12
+				},{
+					id: 2,
+					title: 'Scheduled with delay 22222',
+					text: 'Test Message 22222',
+					at: _10_sec_from_now,
+					sound: sound,
+					badge: 12
+				}
+				);
+			}, 1000);
 		}
 
 ////////////////////////////////////////////////////////////////////////////////////////
