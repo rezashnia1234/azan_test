@@ -26,7 +26,11 @@
 		
 			var networkState = navigator.connection.type;
 
-			PrayerTimesNotification.init('{"text":"json value"}',function(e){},function(e){});
+			var obj = 
+			{
+				"text":"json_value"
+			}
+			PrayerTimesNotification.init(JSON.stringify(obj),function(e){},function(e){});
 
 			FastClick.attach(document.body);
 			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
