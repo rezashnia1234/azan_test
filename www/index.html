@@ -25,7 +25,7 @@
 		function onDeviceReady() {
 		
 			var networkState = navigator.connection.type;
-
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::   onDeviceReady');
 			var obj = 
 			{
 				"lat":32,
@@ -37,7 +37,7 @@
 					"text:":"awdwad",
 					"mp3":"awdawd",
 				}
-			}
+			};
 			PrayerTimesNotification.init(JSON.stringify(obj),function(e){},function(e){});
 
 			FastClick.attach(document.body);
